@@ -46,7 +46,7 @@ resource "aws_msk_cluster" "kafka" {
     instance_type = "kafka.t3.small"
     storage_info {
       ebs_storage_info {
-        volume_size = 1000
+        volume_size = 1
       }      
     }
     client_subnets = [aws_subnet.private_subnet[0].id,
