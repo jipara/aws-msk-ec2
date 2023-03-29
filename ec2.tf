@@ -58,7 +58,7 @@ resource "aws_subnet" "bastion_host_subnet" {
 }
 
 resource "aws_instance" "bastion_host" {
-  depends_on = [aws_msk_cluster.kafka]
+  #depends_on = [aws_msk_cluster.kafka]
   ami = data.aws_ami.amazon_linux_2.id
   instance_type = "t2.micro"
   key_name = aws_key_pair.private_key.key_name
