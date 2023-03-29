@@ -43,7 +43,7 @@ resource "aws_msk_cluster" "kafka" {
   kafka_version = "2.6.2"
   number_of_broker_nodes = 3
   broker_node_group_info {
-    instance_type = "kafka.m5.large"
+    instance_type = "kafka.t3.small"
     storage_info {
       ebs_storage_info {
         volume_size = 1000
